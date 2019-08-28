@@ -20,12 +20,16 @@ const LOGIN_MUTATION = gql`
 `;
 
 class Login extends Component {
-  state = {
-    login: true, // switch between Login and SignUp
-    email: "",
-    password: "",
-    name: ""
-  };
+  constructor() {
+    super();
+
+    this.state = {
+      login: true, // switch between Login and SignUp
+      email: "",
+      password: "",
+      name: ""
+    };
+  }
 
   render() {
     const { login, email, password, name } = this.state;
